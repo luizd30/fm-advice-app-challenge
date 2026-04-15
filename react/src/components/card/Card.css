@@ -9,7 +9,7 @@
   background-color: var(--blue-900);
   text-align: center;
   width: clamp(320px, 100%, 544px);
-  border-radius: 8px;
+  border-radius: var(--space-1);
 }
 
 .card__id {
@@ -62,7 +62,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--green-300);
-  padding: 1rem;
+  padding: 16px;
   border-radius: 100px;
   border: 1px solid var(--green-300);
   transition: box-shadow 0.2s ease-in-out;
@@ -81,4 +81,28 @@
 
 .card__btn:hover {
   box-shadow: 0 0 20px var(--green-300);
+}
+
+@media screen and (min-width: 560px) {
+  .card {
+    gap: var(--space-5);
+    padding: var(--space-10);
+    padding-bottom: var(--space-14);
+    border-radius: var(--space-2);
+  }
+
+  .card__id {
+    font-size: var(--fs-200);
+    line-height: var(--lh-md);
+    letter-spacing: 0.175rem;
+  }
+
+  .card__quote {
+    font-size: var(--fs-400);
+    line-height: var(--lh-lg);
+  }
+
+  .card__btn {
+    padding: 20px;
+  }
 }
